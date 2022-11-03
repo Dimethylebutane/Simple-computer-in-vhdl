@@ -50,12 +50,12 @@ JMP C, A, F : 010 C AA FF
 - if a bit is set to 1, that means we care about this flag and want it to be equal to I to jump;
 
 exemple:
-    if FF = 00 -> always jump
-    if I = 1 and FF = 01 -> jump if Z flag is set
-    if I = 0 and FF = 10 -> jump if N flag is not set
-    if I = 1 and FF = 11 -> jump if Z or N flag is set       ( not strict inequality )
-    if I = 0 and FF = 11 -> jump if Z and N flag are not set ( strict inequality )
-            why and at this? if or -> if X=0 => Z=1 N=0 => jmp if null so not strict inequality
+    if FF = 00 -> always jump \n
+    if I = 1 and FF = 01 -> jump if Z flag is set\n
+    if I = 0 and FF = 10 -> jump if N flag is not set\n
+    if I = 1 and FF = 11 -> jump if Z or N flag is set       ( not strict inequality )\n
+    if I = 0 and FF = 11 -> jump if Z and N flag are not set ( strict inequality )\n
+            why and at this? if or -> if X=0 => Z=1 N=0 => jmp if null so not strict inequality\n
 
 truth table:
     1 = jumping
@@ -78,7 +78,7 @@ truth table:
 
 # Critics
 
-Lack of output
-hard to program
-end with failure because I don't know how to do it properly ¯\_(ツ)_/¯
-only 256 bytes of ram
+- Lack of output
+- hard to program
+- end with failure because I don't know how to do it properly ¯\_(ツ)_/¯
+- only 256 bytes of ram
