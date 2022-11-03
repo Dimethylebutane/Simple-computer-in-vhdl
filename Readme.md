@@ -45,9 +45,9 @@ note that because X is at the en of the ALU, MV and ST instruction will add the 
 
 JMP C, A, F : 010 C AA FF
 
-FF in instruction is 2 bits, LSB is Z flag and MSB is N flag;
-C define the condition of the jump
-if a bit is set to 1, that means we care about this flag and want it to be equal to I to jump;
+- FF in instruction is 2 bits, LSB is Z flag and MSB is N flag;
+- C define the condition of the jump
+- if a bit is set to 1, that means we care about this flag and want it to be equal to I to jump;
 
 exemple:
     if FF = 00 -> always jump
