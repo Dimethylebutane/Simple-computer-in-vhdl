@@ -1,5 +1,6 @@
-SAP-1 inspired computer;
-First time using vhdl, if the code is ugly or un-optimized please tell it to me. Untested for fpga.
+SAP-1 inspired computer;<br/>
+First time using vhdl, if the code is ugly or un-optimized please tell it to me. Untested for fpga.<br/>
+First time with a public repos idk how this work
 
 # Documentation:
 
