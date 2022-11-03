@@ -25,7 +25,7 @@ First time with a public repos idk how this work
         R2 : general purpose Register           binary 10 in instruction
         X : accumulator, store result of ALU    binary 11 in instruction
 
-note that because X is at the en of the ALU, MV and ST instruction will add the data to X
+note that because X is at the end of the ALU, MV, LD, LDI, and GPC instructions will add the data to X
 
 *yes I know that on the vhdl program, R2 is 01 and R1 is 10 but it's the same just a name*
 
@@ -50,14 +50,15 @@ JMP C, A, F : 010 C AA FF
 
 exemple:
     - if FF = 00 -> always jump \n
-    - if I = 1 and FF = 01 -> jump if Z flag is set
-    - if I = 0 and FF = 10 -> jump if N flag is not set
-    - if I = 1 and FF = 11 -> jump if Z or N flag is set       ( not strict inequality )
-    - if I = 0 and FF = 11 -> jump if Z and N flag are not set ( strict inequality )
-            why and at this? if or -> if X=0 => Z=1 N=0 => jmp if null so not strict inequality
+    - if C = 1 and FF = 01 -> jump if Z flag is set
+    - if C = 0 and FF = 10 -> jump if N flag is not set
+    - if C = 1 and FF = 11 -> jump if Z or N flag is set       ( not strict inequality )
+    - if C = 0 and FF = 11 -> jump if Z and N flag are not set ( strict inequality )
+            why 'and' if C=0 and 'or' if 1?
+                if X=0 => Z=1 N=0 => we want to be able to create strict (with and) and not strict (with or) inequality
 
 truth table:
-    1 = jumping
+    1 = jumping<br/>
     0 = not jumping
 
     if I = 1:
