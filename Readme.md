@@ -52,12 +52,12 @@ JMP C, A, F : 010 C AA FF
 - C define the condition of the jump (it negate the condition)
 - if a bit is set to 1, that means we care about this flag and want it to be equal to I to jump;
 
-exemple:
-    - if FF = 00 -> always jump
-    - if C = 1 and FF = 01 -> jump if Z flag is set             ( X = 0 )
-    - if C = 0 and FF = 10 -> jump if N flag is not set         ( X >= 0 )
-    - if C = 1 and FF = 11 -> jump if Z or N flag is set        ( X <= 0 )
-    - if C = 0 and FF = 11 -> jump if Z and N flag are not set  ( X > 0 )
+exemple:<br/>
+    - if FF = 00 -> always jump <br/>
+    - if C = 1 and FF = 01 -> jump if Z flag is set             ( X = 0 )<br/>
+    - if C = 0 and FF = 10 -> jump if N flag is not set         ( X >= 0 )<br/>
+    - if C = 1 and FF = 11 -> jump if Z or N flag is set        ( X <= 0 )<br/>
+    - if C = 0 and FF = 11 -> jump if Z and N flag are not set  ( X > 0 )<br/>
             note: not(a or b) = not(a) and not(b)
 
 truth table:
