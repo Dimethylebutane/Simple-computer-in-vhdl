@@ -81,6 +81,9 @@ truth table:
 
 
 ## random information
+
+**By default, test_bench limits simulation time to avoid infinite loop, see test_bench.vhdl line 97**
+
 Fetching an instruction takes 2 clk cycles, <br/>
 Longest instructions (ST, LD, and LDI) are 4 clk cycles long in total (fetch + execute), others are 3 clk cycles. <br/>
 
