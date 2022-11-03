@@ -16,17 +16,17 @@ First time with a public repos, idk how it works.
 - LD R, A : 0111 AA RR : Load data from ram (adress in register A) to register R
 - LDI R : 000110 RR DDDDDDDD : load register R with value D
 - GPC R : 000111 RR : load register R with program counter
-- ALU OP, R : 0010 OO RR : X <- X Op R, Op the operation (see section ALU)
-- JMP C, A, F : 010 C AA FF : jmp to adress stored in register A if a condition based on FF and C is verified (see section condition)
+- ALU OP, R : 0010 OO RR : X <- X Op R, Op the operation (see section ALU below)
+- JMP C, A, F : 010 C AA FF : jmp to adress stored in register A if a condition based on FF and C is verified (see section Condition below)
 
 ## Register:
-    This computer has 4 register:
+    This computer has 4 registers:
         R0 : always 0                           binary 00 in instruction
         R1 : general purpose Register           binary 01 in instruction
         R2 : general purpose Register           binary 10 in instruction
         X : accumulator, store result of ALU    binary 11 in instruction
 
-note that because X is at the end of the ALU, MV, LD, LDI, and GPC instructions will add the data to X
+note that because X is at the end of the ALU : MV, LD, LDI, and GPC instructions will add the data to X
 
 *yes I know that on the vhdl program, R2 is 01 and R1 is 10 but it's the same just a name*
 
@@ -36,7 +36,7 @@ note that because X is at the end of the ALU, MV, LD, LDI, and GPC instructions 
         01 is -
         10 is and
         11 is or
-    and set 2 flag: 
+    and set 2 flags: 
         Z if X = 0
         N if X < 0 (MSB = 1)
         
