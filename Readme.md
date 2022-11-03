@@ -1,13 +1,11 @@
 SAP-1 inspired computer;
-First time using vhdl, if the code is ugly or un-optimized please tell it to me.
-untested for fpga
+First time using vhdl, if the code is ugly or un-optimized please tell it to me. Untested for fpga.
 
 # Documentation:
 
 ## RAM:
-256 bytes
-Instructions must be stored in ram before launching simulation
-in memory.vhdl, just edit the initial ram content
+- 256 bytes
+- Instructions must be stored in ram before launching simulation. In memory.vhdl, just edit the initial ram content
 
 ## ISA:
     OpCode Dst, Src
