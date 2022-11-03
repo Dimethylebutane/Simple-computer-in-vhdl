@@ -13,7 +13,7 @@ First time with a public repos, idk how it works.
     OpCode Dst, Src
 - MV D, S : 0000 DD SS : Move data from register S to register D
 - ST A, R : 0110 AA RR : Store data from register R to ram at adress stored by register A
-- LD R, A : 0111 AA RR : Load data from ram (adress in register A) to register R
+- LD R, A : 0111 RR AA : Load data from ram (adress in register A) to register R
 - LDI R : 000110 RR DDDDDDDD : load register R with value D
 - GPC R : 000111 RR : load register R with program counter
 - ALU OP, R : 0010 OO RR : X <- X Op R, Op the operation (see section ALU below)
