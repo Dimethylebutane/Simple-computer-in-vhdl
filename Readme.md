@@ -11,13 +11,13 @@ in memory.vhdl, just edit the initial ram content
 
 ## ISA:
     OpCode Dst, Src
-MV D, S : 0000 DD SS : Move data of register S to register D
-ST A, R : 0110 AA RR : Store data of register R to ram at adress pointed by register A
-LD R, A : 0111 AA RR : Load data from ram adress of register A to register R
-LDI R : 001_10 RR DDDDDDDD : load register R with value D
-GPC R : 0001_11 RR : load register R with program counter
-ALU OP, R : 0010 OO RR : X <- X Op R, Op the operation (see section ALU)
-JMP C, A, F : 010 C AA FF : jmp to adress stored in register A if a condition based on FF and C is verified (see section condition)
+- MV D, S : 0000 DD SS : Move data of register S to register D
+- ST A, R : 0110 AA RR : Store data of register R to ram at adress pointed by register A
+- LD R, A : 0111 AA RR : Load data from ram adress of register A to register R
+- LDI R : 001_10 RR DDDDDDDD : load register R with value D
+- GPC R : 0001_11 RR : load register R with program counter
+- ALU OP, R : 0010 OO RR : X <- X Op R, Op the operation (see section ALU)
+- JMP C, A, F : 010 C AA FF : jmp to adress stored in register A if a condition based on FF and C is verified (see section condition)
 
 ## Register:
     This computer has 4 register:
