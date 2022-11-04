@@ -49,11 +49,13 @@ exemple: <br/>
 JMP C, A, F : 010 C AA FF
 
 - FF in instruction is 2 bits, LSB is Z flag and MSB is N flag;
-- C define the condition of the jump (it negate the condition)
-- if a bit is set to 1, that means we care about this flag and want it to be equal to I to jump;
+- C define the condition of the jump (it sort of negate the condition)
+- if one of FF bit is set to 1, that means we care about this flag and want it to be equal to C to jump;
+
+Jump if: (one or more flags selected by FF are set) xor C=0
 
 exemple:<br/>
-    - if FF = 00 -> always jump <br/>
+    - if FF = 00 -> always jump, don't care of any flag <br/>
     - if C = 1 and FF = 01 -> jump if Z flag is set             ( X = 0 )<br/>
     - if C = 0 and FF = 10 -> jump if N flag is not set         ( X >= 0 )<br/>
     - if C = 1 and FF = 11 -> jump if Z or N flag is set        ( X <= 0 )<br/>
